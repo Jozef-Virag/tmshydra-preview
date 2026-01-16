@@ -1,0 +1,145 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+
+const categories = ["Všetky", "Komerčné", "Rezidenčné", "Priemyselné", "Rekonštrukcie"]
+
+const projects = [
+  {
+    id: "1",
+    slug: "vymena-strechy-obchodneho-centra",
+    image: "/red-metal-roof-construction-workers-scaffolding.jpg",
+    title: "Výmena strechy obchodného centra",
+    category: "Komerčné",
+    description: "Kompletná výmena strechy s novým izolačným systémom",
+  },
+  {
+    id: "2",
+    slug: "nova-strecha-rodinneho-domu",
+    image: "/workers-installing-roof-tiles-residential-house.jpg",
+    title: "Nová strecha rodinného domu",
+    category: "Rezidenčné",
+    description: "Inštalácia pálenej krytiny na novostavbu",
+  },
+  {
+    id: "3",
+    slug: "rekonstrukcia-priemyselnej-haly",
+    image: "/industrial-warehouse-roof-renovation.jpg",
+    title: "Rekonštrukcia priemyselnej haly",
+    category: "Priemyselné",
+    description: "Modernizácia strešného plášťa veľkej výrobnej haly",
+  },
+  {
+    id: "4",
+    slug: "bytovy-komplex-panorama",
+    image: "/modern-apartment-building-roof-installation.jpg",
+    title: "Bytový komplex Panorama",
+    category: "Komerčné",
+    description: "Komplexné strešné riešenie pre bytový dom",
+  },
+  {
+    id: "5",
+    slug: "rekonstrukcia-historickej-budovy",
+    image: "/roof-repair-worker-fixing-damaged-roof.jpg",
+    title: "Rekonštrukcia historickej budovy",
+    category: "Rekonštrukcie",
+    description: "Citlivá obnova strechy pamiatkovej budovy",
+  },
+]
+
+export function ProjectsSection() {
+  const [activeCategory, setActiveCategory] = useState("Všetky")
+
+  const filteredProjects =
+    activeCategory === "Všetky" ? projects : projects.filter((p) => p.category === activeCategory)
+
+  return (
+    <section id="projekty" className="py-24 px-6 lg:px-12 bg-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 reveal">
+          <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Naše najnovšie práce</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance max-w-3xl mx-auto">
+            Preskúmajte naše najnovšie projekty pre vašu inšpiráciu
+          </h2>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 reveal">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 md:px-6 py-2 text-sm font-medium rounded-full transition-all ${
+                activeCategory === category
+                  ? "bg-amber-500 text-white shadow-lg shadow-amber-500/30"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {filteredProjects.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {filteredProjects.map((project, index) => {
+              // First project gets special treatment only when there are 3+ projects
+              const isFirstLarge = index === 0 && filteredProjects.length >= 3
+
+              return (
+                <Link
+                  key={project.id}
+                  href={`/projects/${project.slug}`}
+                  className={`group relative overflow-hidden rounded-2xl ${
+                    isFirstLarge ? "lg:col-span-2 lg:row-span-2" : ""
+                  }`}
+                >
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className={`w-full object-cover group-hover:scale-105 transition-transform duration-700 ${
+                      isFirstLarge ? "h-72 lg:h-full" : "h-72"
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className={`absolute bottom-0 left-0 right-0 ${isFirstLarge ? "p-6 lg:p-8" : "p-6"}`}>
+                    <span className="inline-block bg-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                      {project.category}
+                    </span>
+                    <h3 className={`font-bold text-white mb-2 ${isFirstLarge ? "text-xl lg:text-2xl" : "text-lg"}`}>
+                      {project.title}
+                    </h3>
+                    {isFirstLarge ? (
+                      <>
+                        <p className="text-gray-300 text-sm mb-4 hidden lg:block">{project.description}</p>
+                        <span className="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm group-hover:gap-3 transition-all">
+                          Zobraziť projekt <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        {filteredProjects.length <= 2 && (
+                          <p className="text-gray-300 text-sm mb-2 line-clamp-2">{project.description}</p>
+                        )}
+                        <span className="inline-flex items-center gap-2 text-amber-500 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                          Zobraziť <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </>
+                    )}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <p className="text-gray-500 text-lg">Žiadne projekty v tejto kategórii</p>
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
