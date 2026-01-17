@@ -15,13 +15,24 @@ const heroImages = [
 
 export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+      // Reset transition lock after animation completes
+      setTimeout(() => setIsTransitioning(false), 1000)
+    }
   }
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+      // Reset transition lock after animation completes
+      setTimeout(() => setIsTransitioning(false), 1000)
+    }
   }
 
   // Auto-rotate images every 5 seconds
@@ -33,15 +44,22 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
-        style={{
-          backgroundImage: `url('${heroImages[currentImageIndex]}')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
+    <section className="relative h-screen flex items-center overflow-hidden">
+      {/* Background Images with Crossfade */}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url('${image}')`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+        ))}
       </div>
 
       {/* Navigation Arrows */}
@@ -94,6 +112,28 @@ export function HeroSection() {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Image Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              if (!isTransitioning && index !== currentImageIndex) {
+                setIsTransitioning(true)
+                setCurrentImageIndex(index)
+                setTimeout(() => setIsTransitioning(false), 1000)
+              }
+            }}
+            className={`transition-all duration-300 rounded-full ${
+              index === currentImageIndex
+                ? 'w-12 h-3 bg-amber-500'
+                : 'w-3 h-3 bg-white/50 hover:bg-white/80'
+            }`}
+            aria-label={`Prejsť na obrázok ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   )
