@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -55,6 +55,17 @@ export function ProjectsSection() {
   const filteredProjects =
     activeCategory === "Všetky" ? projects : projects.filter((p) => p.category === activeCategory)
 
+  // Re-trigger animations when category changes
+  useEffect(() => {
+    const elements = document.querySelectorAll("#projekty .reveal-scale")
+    elements.forEach((el) => {
+      el.classList.remove("visible")
+      setTimeout(() => {
+        el.classList.add("visible")
+      }, 50)
+    })
+  }, [activeCategory])
+
   return (
     <section id="projekty" className="py-24 px-6 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -84,26 +95,30 @@ export function ProjectsSection() {
         </div>
 
         {filteredProjects.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div key={activeCategory} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {filteredProjects.map((project, index) => {
               // First project gets special treatment only when there are 3+ projects
               const isFirstLarge = index === 0 && filteredProjects.length >= 3
 
               return (
                 <Link
-                  key={project.id}
+                  key={`${activeCategory}-${project.id}`}
                   href={`/projects/${project.slug}`}
-                  className={`group relative overflow-hidden rounded-2xl ${
+                  className={`group relative overflow-hidden rounded-2xl reveal-scale ${
                     isFirstLarge ? "lg:col-span-2 lg:row-span-2" : ""
                   }`}
+                  style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className={`w-full object-cover group-hover:scale-105 transition-transform duration-700 ${
-                      isFirstLarge ? "h-72 lg:h-full" : "h-72"
-                    }`}
-                  />
+                  <div className="relative w-full h-72 lg:h-full overflow-hidden">
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      loading="eager"
+                      className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${
+                        isFirstLarge ? "lg:h-full" : "h-72"
+                      }`}
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className={`absolute bottom-0 left-0 right-0 ${isFirstLarge ? "p-6 lg:p-8" : "p-6"}`}>
                     <span className="inline-block bg-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
@@ -139,6 +154,15 @@ export function ProjectsSection() {
             <p className="text-gray-500 text-lg">Žiadne projekty v tejto kategórii</p>
           </div>
         )}
+
+        {/* View All Projects Button */}
+        <div className="text-center mt-12 reveal">
+          <Link href="/projects">
+            <button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-6 rounded-none inline-flex items-center gap-2 transition-colors shadow-md hover:shadow-lg">
+              Zobraziť všetky projekty <ArrowRight className="w-4 h-4" />
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   )

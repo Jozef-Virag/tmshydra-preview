@@ -90,7 +90,7 @@ export function CalculatorSection() {
   }
 
   return (
-    <section className="py-24 px-6 lg:px-12 bg-gray-50">
+    <section id="kalkulacka" className="py-24 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 reveal">

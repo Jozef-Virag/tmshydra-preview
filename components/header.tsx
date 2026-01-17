@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
@@ -53,42 +53,37 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-8">
           <Link
             href="/"
-            className={`flex items-center gap-1 font-medium text-sm transition-colors ${
+            className={`font-medium text-sm transition-colors ${
               pathname === "/" ? "text-amber-500" : "text-white hover:text-amber-500"
             }`}
           >
             Domov
-            <ChevronDown className="w-4 h-4" />
           </Link>
           <Link
             href="/#sluzby"
-            className="flex items-center gap-1 text-white font-medium text-sm hover:text-amber-500 transition-colors"
+            className="text-white font-medium text-sm hover:text-amber-500 transition-colors"
           >
             Služby
-            <ChevronDown className="w-4 h-4" />
           </Link>
           <Link
             href="/#projekty"
-            className="flex items-center gap-1 text-white font-medium text-sm hover:text-amber-500 transition-colors"
+            className="text-white font-medium text-sm hover:text-amber-500 transition-colors"
           >
             Projekty
-            <ChevronDown className="w-4 h-4" />
           </Link>
           <Link
             href="/#kalkulacka"
-            className="flex items-center gap-1 text-white font-medium text-sm hover:text-amber-500 transition-colors"
+            className="text-white font-medium text-sm hover:text-amber-500 transition-colors"
           >
             Cenník
-            <ChevronDown className="w-4 h-4" />
           </Link>
           <Link
             href="/#blog"
-            className={`flex items-center gap-1 font-medium text-sm transition-colors ${
+            className={`font-medium text-sm transition-colors ${
               pathname.startsWith("/blog") ? "text-amber-500" : "text-white hover:text-amber-500"
             }`}
           >
             Blog
-            <ChevronDown className="w-4 h-4" />
           </Link>
           <Link href="/#kontakt" className="text-white font-medium text-sm hover:text-amber-500 transition-colors">
             Kontakt
@@ -96,12 +91,14 @@ export function Header() {
         </nav>
 
         {/* Desktop CTA Button */}
-        <Button
-          variant="outline"
-          className="hidden lg:flex border-white text-white hover:bg-white hover:text-gray-900 rounded-none px-6 py-5 font-medium bg-transparent"
-        >
-          Začať
-        </Button>
+        <Link href="/#kalkulacka">
+          <Button
+            variant="outline"
+            className="hidden lg:flex border-white text-white hover:bg-white hover:text-gray-900 rounded-none px-6 py-5 font-medium bg-transparent"
+          >
+            Začať
+          </Button>
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden text-white p-2">
@@ -150,7 +147,9 @@ export function Header() {
           >
             Kontakt
           </Link>
-          <Button className="bg-amber-500 hover:bg-amber-600 text-white font-medium w-full mt-2">Začať</Button>
+          <Link href="/#kalkulacka" onClick={() => setMobileMenuOpen(false)}>
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white font-medium w-full mt-2">Začať</Button>
+          </Link>
         </nav>
       )}
     </header>

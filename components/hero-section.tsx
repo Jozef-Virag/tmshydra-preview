@@ -2,25 +2,59 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+
+const heroImages = [
+  "/professional-roofers-working-on-residential-roof-t.jpg",
+  "/professional-roofer-working-on-house-roof-sunny-da.jpg",
+  "/modern-roof-architecture-aerial-view.jpg",
+  "/workers-installing-roof-tiles-residential-house.jpg",
+  "/red-metal-roof-construction-workers-scaffolding.jpg",
+]
 
 export function HeroSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+  }
+
+  // Auto-rotate images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative h-screen flex items-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
         style={{
-          backgroundImage: `url('/professional-roofers-working-on-residential-roof-t.jpg')`,
+          backgroundImage: `url('${heroImages[currentImageIndex]}')`,
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Navigation Arrows */}
-      <button className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+      <button
+        onClick={prevImage}
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+      >
         <ChevronLeft className="w-6 h-6" />
       </button>
-      <button className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+      <button
+        onClick={nextImage}
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+      >
         <ChevronRight className="w-6 h-6" />
       </button>
 
@@ -45,15 +79,19 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-6 rounded-none text-base">
-              Objednať termín
-            </Button>
-            <Button
-              variant="outline"
-              className="bg-white hover:bg-gray-100 text-gray-900 border-white font-semibold px-8 py-6 rounded-none text-base"
-            >
-              O nás
-            </Button>
+            <Link href="/#kalkulacka">
+              <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-6 rounded-none text-base w-full sm:w-auto">
+                Objednať termín
+              </Button>
+            </Link>
+            <Link href="/#o-nas">
+              <Button
+                variant="outline"
+                className="bg-white hover:bg-gray-100 text-gray-900 border-white font-semibold px-8 py-6 rounded-none text-base w-full sm:w-auto"
+              >
+                O nás
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

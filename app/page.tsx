@@ -11,6 +11,7 @@ import { CtaSection } from "@/components/cta-section"
 import { CalculatorSection } from "@/components/calculator-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { BlogSection } from "@/components/blog-section"
+import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
       <CalculatorSection />
       <TestimonialsSection />
       <BlogSection />
+      <ContactSection />
       <Footer />
     </main>
   )

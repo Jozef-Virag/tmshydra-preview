@@ -1,4 +1,4 @@
-import { Play, Star } from "lucide-react"
+import {ArrowLeft, Play, Star} from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -217,7 +217,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Preskúmajte ďalšie projekty
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {project.relatedProjects.map((proj: any, i: number) => (
               <Link
                 key={i}
@@ -238,6 +238,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* View All Projects Link */}
+          <div className="text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-600 font-semibold text-lg transition-colors group"
+            >
+              Zobraziť všetky projekty
+              <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

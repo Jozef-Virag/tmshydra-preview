@@ -112,7 +112,7 @@ export function BlogSection() {
 
         {/* CTA */}
         <div className="text-center reveal">
-          <Link href="/blog/ako-spravne-udrzavat-vasu-strechu">
+          <Link href="/blog">
             <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-6 rounded-none">
               Zobraziť všetky články <ArrowRight className="ml-2 w-4 h-4" />
             </Button>

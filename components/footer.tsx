@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowRight } from "lucide-react"
+import { Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -22,28 +22,31 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors rounded"
+                aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors"
+                href="https://wa.me/421911551354"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-colors rounded"
+                aria-label="WhatsApp"
               >
-                <Twitter className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors rounded"
+                aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-amber-500 flex items-center justify-center transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -71,13 +74,36 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Rýchle odkazy</h4>
             <ul className="space-y-3">
-              {["Domov", "O nás", "Služby", "Projekty", "Blog", "Kontakt"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Domov
+                </a>
+              </li>
+              <li>
+                <a href="/#o-nas" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  O nás
+                </a>
+              </li>
+              <li>
+                <a href="/#sluzby" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Služby
+                </a>
+              </li>
+              <li>
+                <a href="/#projekty" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Projekty
+                </a>
+              </li>
+              <li>
+                <a href="/#blog" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/#kontakt" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Kontakt
+                </a>
+              </li>
             </ul>
           </div>
 

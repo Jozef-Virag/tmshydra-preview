@@ -2,10 +2,11 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MessageSquare } from "lucide-react"
+import Link from "next/link"
 
 export function AboutSection() {
   return (
-    <section className="py-24 px-6 lg:px-12 bg-white">
+    <section id="o-nas" className="py-24 px-6 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -43,10 +44,10 @@ export function AboutSection() {
             </div>
 
             {/* Get Quote Button */}
-            <button className="absolute top-6 right-6 bg-gray-900 text-white px-4 py-3 flex items-center gap-2 hover:bg-gray-800 transition-colors">
+            <Link href="/#kontakt" className="absolute top-6 right-6 bg-gray-900 text-white px-4 py-3 flex items-center gap-2 hover:bg-gray-800 transition-colors">
               <MessageSquare className="w-5 h-5" />
               <span className="text-sm font-medium">Získať ponuku</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-24 px-6 lg:px-12 bg-amber-500">
+    <section id="sluzby" className="py-24 px-6 lg:px-12 bg-amber-500">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 reveal">
@@ -61,10 +61,10 @@ export function ServicesSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
                 <a
-                  href="#"
+                  href="/#kontakt"
                   className="inline-flex items-center text-amber-500 font-semibold text-sm hover:text-amber-600 transition-colors"
                 >
-                  Čítať viac <ArrowRight className="ml-2 w-4 h-4" />
+                  Kontaktovať nás <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -115,8 +115,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <article className="py-16 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           {/* Back Button */}
-          <Link href="/#blog" className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-600 mb-8">
-            <ArrowLeft className="w-4 h-4" />
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-600 mb-10 font-medium transition-colors group"
+          >
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             Späť na blog
           </Link>
 
@@ -185,6 +188,26 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                       </Link>
                     ))}
                   </div>
+                  <Link
+                    href="/blog"
+                    className="block mt-6 pt-6 border-t border-gray-200 text-center text-amber-500 hover:text-amber-600 font-semibold text-sm transition-colors"
+                  >
+                    Zobraziť všetky články →
+                  </Link>
+                </div>
+
+                {/* CTA Card */}
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 text-white shadow-lg mt-8">
+                  <h3 className="text-lg font-bold mb-3">Potrebujete pomoc so strechou?</h3>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                    Kontaktujte našich expertov pre bezplatnú konzultáciu a cenovú ponuku.
+                  </p>
+                  <Link
+                    href="/#kontakt"
+                    className="block w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors shadow-lg text-sm"
+                  >
+                    Kontaktovať nás
+                  </Link>
                 </div>
               </div>
             </aside>
