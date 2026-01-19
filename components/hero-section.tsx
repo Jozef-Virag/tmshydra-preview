@@ -81,18 +81,17 @@ export function HeroSection() {
         <div className="max-w-2xl">
           {/* Tagline */}
           <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">
-            Kompletné riešenie pre vašu strechu
+            Odborníci na hydroizolácie a zateplenie
           </p>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-            Profesionálne strešné a opravárenské služby
+            Profesionálne izolácie plochých striech a základov
           </h1>
 
           {/* Description */}
           <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-xl">
-            Poskytujeme kvalitné strešné služby s dlhoročnými skúsenosťami. Naši odborníci zabezpečia vašu strechu proti
-            všetkým poveternostným podmienkam.
+            Špecializujeme sa na hydroizolácie a zateplenie plochých striech, ako aj izolácie základových dosiek. Pôsobíme v Nitrianskom kraji s dlhoročnými skúsenosťami.
           </p>
 
           {/* CTA Buttons */}

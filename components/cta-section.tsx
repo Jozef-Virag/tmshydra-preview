@@ -12,7 +12,7 @@ export function CtaSection() {
             <img src="/professional-roofer-installing-roof-tiles-close-up.jpg" alt="Pokrývač pri práci" className="w-full h-[400px] object-cover" />
             {/* Circular Stats */}
             <div className="absolute -bottom-8 -right-8 lg:right-8 w-36 h-36 bg-amber-500 rounded-full flex flex-col items-center justify-center text-white">
-              <span className="text-4xl font-bold">98%</span>
+              <span className="text-4xl font-bold">100%</span>
               <span className="text-xs text-center">
                 Spokojných
                 <br />
@@ -24,11 +24,10 @@ export function CtaSection() {
           {/* Right - Content */}
           <div className="reveal-right">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 text-balance">
-              Hľadáte strešné služby?
+              Potrebujete hydroizoláciu alebo zateplenie?
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Neváhajte nás kontaktovať pre bezplatnú konzultáciu a cenovú ponuku. Náš tím odborníkov je pripravený
-              pomôcť vám s akýmkoľvek strešným projektom, či už ide o novú strechu alebo opravu existujúcej.
+              Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Naši odborníci vám poradia s izoláciou plochej strechy, zateplením či ochranou základov. Pôsobíme v Nitrianskom kraji.
             </p>
             <a
               href="tel:+421911551354

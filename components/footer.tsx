@@ -18,7 +18,7 @@ export function Footer() {
               <span className="text-xl font-bold">TMSHydra</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Profesionálne strešné služby s viac ako 30-ročnou tradíciou. Vaša spokojnosť je našou prioritou.
+              Profesionálne hydroizolácie a zateplenie plochých striech, izolácie základov. Pôsobíme v Nitrianskom kraji s dôrazom na kvalitu a spokojnosť zákazníkov.
             </p>
             <div className="flex gap-4">
               <a
@@ -111,7 +111,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Odoberajte novinky</h4>
             <p className="text-gray-400 text-sm mb-4">
-              Prihláste sa na odber noviniek a získajte najnovšie informácie.
+              Získajte tipy na údržbu plochých striech a informácie o nových technológiách.
             </p>
             <div className="flex gap-0">
               <Input

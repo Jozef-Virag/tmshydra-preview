@@ -4,48 +4,48 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-const categories = ["Všetky", "Komerčné", "Rezidenčné", "Priemyselné", "Rekonštrukcie"]
+const categories = ["Všetky", "Komerčné", "Rezidenčné", "Priemyselné", "Základy"]
 
 const projects = [
   {
     id: "1",
-    slug: "vymena-strechy-obchodneho-centra",
-    image: "/red-metal-roof-construction-workers-scaffolding.jpg",
-    title: "Výmena strechy obchodného centra",
+    slug: "hydroizolacia-obchodneho-centra",
+    image: "/flat-roof-construction-commercial-building.jpg",
+    title: "Hydroizolácia obchodného centra",
     category: "Komerčné",
-    description: "Kompletná výmena strechy s novým izolačným systémom",
+    description: "Kompletná hydroizolácia plochej strechy s PVC fóliou",
   },
   {
     id: "2",
-    slug: "nova-strecha-rodinneho-domu",
-    image: "/workers-installing-roof-tiles-residential-house.jpg",
-    title: "Nová strecha rodinného domu",
+    slug: "zateplenie-bytoveho-domu",
+    image: "/modern-apartment-building-roof-installation.jpg",
+    title: "Zateplenie bytového domu",
     category: "Rezidenčné",
-    description: "Inštalácia pálenej krytiny na novostavbu",
+    description: "Zateplenie plochej strechy bytového domu v Nitre",
   },
   {
     id: "3",
-    slug: "rekonstrukcia-priemyselnej-haly",
+    slug: "izolacia-haly",
     image: "/industrial-warehouse-roof-renovation.jpg",
-    title: "Rekonštrukcia priemyselnej haly",
+    title: "Izolácia priemyselnej haly",
     category: "Priemyselné",
-    description: "Modernizácia strešného plášťa veľkej výrobnej haly",
+    description: "Hydroizolácia a zateplenie plochej strechy výrobnej haly",
   },
   {
     id: "4",
-    slug: "bytovy-komplex-panorama",
-    image: "/modern-apartment-building-roof-installation.jpg",
-    title: "Bytový komplex Panorama",
-    category: "Komerčné",
-    description: "Komplexné strešné riešenie pre bytový dom",
+    slug: "rodinny-dom-palarikovo",
+    image: "/modern-roof-architecture-aerial-view.jpg",
+    title: "Rodinný dom - Palárikovo",
+    category: "Rezidenčné",
+    description: "Hydroizolácia plochej strechy rodinného domu",
   },
   {
     id: "5",
-    slug: "rekonstrukcia-historickej-budovy",
-    image: "/roof-repair-worker-fixing-damaged-roof.jpg",
-    title: "Rekonštrukcia historickej budovy",
-    category: "Rekonštrukcie",
-    description: "Citlivá obnova strechy pamiatkovej budovy",
+    slug: "izolacia-zakladov",
+    image: "/roofing-installation-process.jpg",
+    title: "Izolácia základov novostavby",
+    category: "Základy",
+    description: "Protiradonová a hydroizolačná ochrana základovej dosky",
   },
 ]
 
@@ -71,9 +71,9 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 reveal">
-          <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Naše najnovšie práce</p>
+          <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Naše realizácie</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance max-w-3xl mx-auto">
-            Preskúmajte naše najnovšie projekty pre vašu inšpiráciu
+            Pozrite sa na naše zrealizované projekty
           </h2>
         </div>
 

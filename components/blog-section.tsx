@@ -6,28 +6,28 @@ import Link from "next/link"
 
 const posts = [
   {
-    slug: "ako-spravne-udrzavat-vasu-strechu",
+    slug: "ako-udrzavat-plochu-strechu",
     image: "/roof-maintenance-tips-homeowner.jpg",
-    title: "Ako správne udržiavať vašu strechu",
+    title: "Ako správne udržiavať plochú strechu",
     date: "15. január 2026",
     author: "Ján Kováč",
-    excerpt: "Základné tipy pre predĺženie životnosti vašej strechy a zníženie nákladov na opravy.",
+    excerpt: "Praktické rady pre predĺženie životnosti plochej strechy a prevenciu zatečení.",
   },
   {
-    slug: "porovnanie-stresnych-materialov",
+    slug: "hydroizolacia-plochej-strechy",
     image: "/modern-roofing-materials-comparison.jpg",
-    title: "Porovnanie strešných materiálov",
+    title: "Výber hydroizolácie pre plochú strechu",
     date: "10. január 2026",
     author: "Mária Vargová",
-    excerpt: "Ktorý materiál je najlepší pre váš dom? Komplexné porovnanie výhod a nevýhod.",
+    excerpt: "Porovnanie asfaltových pásov, PVC fólií a iných moderných hydroizolačných materiálov.",
   },
   {
-    slug: "priprava-strechy-na-zimu",
+    slug: "priprava-plochej-strechy-na-zimu",
     image: "/winter-roof.jpg",
-    title: "Príprava strechy na zimu",
+    title: "Príprava plochej strechy na zimu",
     date: "5. január 2026",
     author: "Peter Horváth",
-    excerpt: "Dôležité kroky pred príchodom mrazov pre ochranu vašej strechy.",
+    excerpt: "Dôležité kroky kontroly odvodnenia a hydroizolácie pred zimným obdobím.",
   },
 ]
 

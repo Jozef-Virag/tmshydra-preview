@@ -13,12 +13,10 @@ export function AboutSection() {
           <div className="reveal-left">
             <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">O našej spoločnosti</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 text-balance">
-              Dosiahnite svoje ciele rýchlejšie a jednoduchšie
+              Spoľahlivé izolácie pre váš dom či firmu
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              S viac ako 30-ročnými skúsenosťami v oblasti strešných služieb sme sa stali lídrom na trhu. Naša
-              spoločnosť ponúka komplexné riešenia pre všetky typy striech, od rodinných domov až po veľké komerčné
-              budovy. Dôverujte odborníkom.
+              Špecializujeme sa na komplexné riešenia hydroizolácií a zateplenia plochých striech, ako aj izolácie základových dosiek a základov. Pôsobíme v Nitrianskom kraji a okolí. Naše práce sú kvalitné, trvanlivé a vykonané podľa platných noriem. Dôverujte lokálnym odborníkom.
             </p>
             <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-6 rounded-none">
               Zistiť viac <ArrowRight className="ml-2 w-4 h-4" />
@@ -35,7 +33,7 @@ export function AboutSection() {
 
             {/* Stats Overlay */}
             <div className="absolute -bottom-8 -left-8 bg-amber-500 text-white p-6">
-              <span className="text-5xl font-bold">30+</span>
+              <span className="text-5xl font-bold">15+</span>
               <p className="text-sm mt-1">
                 Rokov
                 <br />
@@ -46,7 +44,7 @@ export function AboutSection() {
             {/* Get Quote Button */}
             <Link href="/#kontakt" className="absolute top-6 right-6 bg-gray-900 text-white px-4 py-3 flex items-center gap-2 hover:bg-gray-800 transition-colors">
               <MessageSquare className="w-5 h-5" />
-              <span className="text-sm font-medium">Získať ponuku</span>
+              <span className="text-sm font-medium">Nezáväzná konzultácia</span>
             </Link>
           </div>
         </div>

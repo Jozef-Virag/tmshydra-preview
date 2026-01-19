@@ -94,11 +94,11 @@ export function CalculatorSection() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Kalkulačka</p>
+          <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Cenová kalkulačka</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Vypočítajte si cenu plochej strechy ihneď
+            Vypočítajte si orientačnú cenu
           </h2>
-          <p className="text-gray-600 text-lg">Výpočet je nezáväzný a zdarmo</p>
+          <p className="text-gray-600 text-lg">Nezáväzný výpočet zdarma</p>
         </div>
 
         {/* Calculator Form */}
@@ -115,8 +115,8 @@ export function CalculatorSection() {
                 className="w-full px-4 py-3 border border-gray-300 rounded appearance-none bg-white cursor-pointer text-gray-900"
               >
                 <option value="repair">Oprava/rekonštrukcia plochej strechy</option>
-                <option value="new">Nová strecha</option>
-                <option value="maintenance">Údržba strechy</option>
+                <option value="new">Nová hydroizolácia a zateplenie</option>
+                <option value="maintenance">Izolácia základov</option>
               </select>
               <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             </div>
@@ -126,7 +126,7 @@ export function CalculatorSection() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <label className="block text-sm font-semibold text-gray-900 mb-3">
-                Typ vašej strechy <span className="text-red-500">*</span>
+                Typ objektu <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <select
@@ -135,9 +135,9 @@ export function CalculatorSection() {
                   className="w-full px-4 py-3 border border-gray-300 rounded appearance-none bg-white cursor-pointer text-gray-900"
                 >
                   <option value="residential">Rodinný dom</option>
-                  <option value="apartment">Byt</option>
-                  <option value="commercial">Obchodný priestor</option>
-                  <option value="industrial">Priemyselný objekt</option>
+                  <option value="apartment">Bytový dom</option>
+                  <option value="commercial">Komerčný objekt</option>
+                  <option value="industrial">Priemyselná budova</option>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
               </div>
@@ -145,7 +145,7 @@ export function CalculatorSection() {
 
             <div>
               <label className="block text-sm font-semibold text-gray-900 mb-3">
-                Veľkosť strechy v m<sup>2</sup> <span className="text-red-500">*</span>
+                Plocha v m<sup>2</sup> <span className="text-red-500">*</span>
               </label>
               <input
                 type="number"
@@ -161,14 +161,14 @@ export function CalculatorSection() {
           <div className="mb-8 pb-8 border-b border-gray-200">
             <div className="flex items-center gap-2 mb-4">
               <label className="block text-sm font-semibold text-gray-900">
-                SKLADBA STRECHY <span className="text-xs text-gray-500">*</span>
+                Doplnkové služby
               </label>
               <button type="button" className="text-gray-400 hover:text-gray-600">
                 <Info className="w-4 h-4" />
               </button>
             </div>
             <p className="text-xs text-gray-500 mb-4">
-              SKLADBA STRECHY* je hydroizolačná vrstva - hydroizolačné asfaltové pásy nopujúcej kvality
+              Vyberte si doplnkové služby podľa vašich potrieb
             </p>
 
             <div className="space-y-3">
@@ -181,7 +181,7 @@ export function CalculatorSection() {
                 />
                 <span className="text-sm font-medium text-gray-900">Zateplenie strechy</span>
                 <span className="text-xs text-gray-500">
-                  Špecializované s minimálnou separačnou vrstvou podľa nayujúcej kvality
+                  Tepelná izolácia z EPS alebo XPS penových dosiek
                 </span>
               </label>
 
@@ -192,9 +192,9 @@ export function CalculatorSection() {
                   onChange={(e) => setHasWaterproofing(e.target.checked)}
                   className="w-5 h-5 rounded border-gray-300 text-amber-500"
                 />
-                <span className="text-sm font-medium text-gray-900">Hydroizolácia</span>
+                <span className="text-sm font-medium text-gray-900">Prémiová hydroizolácia</span>
                 <span className="text-xs text-gray-500">
-                  Typ hydroizolačného materiálu, modifikovaný asfaltové pásy nopujúcej kvality
+                  Vysoko kvalitné asfaltové pásy alebo PVC fólie
                 </span>
               </label>
             </div>

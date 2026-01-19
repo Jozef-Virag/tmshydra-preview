@@ -40,10 +40,10 @@ export function ContactSection() {
         <div className="text-center mb-16 reveal">
           <p className="text-amber-500 font-semibold tracking-wider uppercase mb-4 text-sm">Kontaktujte nás</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Máte otázky? Sme tu pre vás
+            Máte otázky? Radi vám pomôžeme
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Neváhajte nás kontaktovať. Radi vám poradíme a poskytneme bezplatnú cenovú ponuku.
+            Kontaktujte nás pre bezplatnú konzultáciu a nezáväznú cenovú ponuku. Pôsobíme v Nitrianskom kraji.
           </p>
         </div>
 

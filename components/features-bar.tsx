@@ -5,18 +5,18 @@ import { Award, Users, Clock } from "lucide-react"
 const features = [
   {
     icon: Award,
-    title: "Kvalitné produkty",
-    description: "Používame len najkvalitnejšie materiály pre dlhú životnosť vašej strechy.",
+    title: "Certifikované materiály",
+    description: "Používame len prémiové hydroizolačné materiály s dlhou životnosťou.",
   },
   {
     icon: Users,
-    title: "Vyškolení pracovníci",
-    description: "Náš tím tvoria certifikovaní odborníci s dlhoročnými skúsenosťami.",
+    title: "Skúsený tým",
+    description: "Vyškolení odborníci s certifikátmi pre izolácie plochých striech.",
   },
   {
     icon: Clock,
     title: "Rýchla reakcia",
-    description: "Sme k dispozícii 24/7 pre núdzové opravy a rýchle riešenia.",
+    description: "Pohotová diagnostika a riešenie problémov s vlhkosťou a zatečením.",
   },
 ]
 

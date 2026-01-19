@@ -4,34 +4,34 @@ import { ArrowRight } from "lucide-react"
 
 const services = [
   {
-    image: "/metal-roofing-installation-modern-building.jpg",
-    title: "Kovové strechy",
-    description: "Odolné a dlhotrvajúce kovové strešné systémy pre moderné budovy.",
-  },
-  {
-    image: "/composition-shingle-roofing-residential.jpg",
-    title: "Kompozitné strechy",
-    description: "Kvalitné kompozitné šindle pre estetický a funkčný vzhľad.",
-  },
-  {
-    image: "/rain-gutter-installation-house.jpg",
-    title: "Odkvapové služby",
-    description: "Kompletná inštalácia a údržba odkvapových systémov.",
-  },
-  {
-    image: "/tile-slate-roofing-traditional-house.jpg",
-    title: "Škridlové strechy",
-    description: "Tradičné škridlové a bridlicové strechy pre elegantný vzhľad.",
-  },
-  {
     image: "/flat-roof-construction-commercial-building.jpg",
-    title: "Ploché strechy",
-    description: "Profesionálna konštrukcia plochých striech pre komerčné objekty.",
+    title: "Hydroizolácia plochých striech",
+    description: "Profesionálne hydroizolačné systémy pre ploché strechy s dlhou životnosťou.",
+  },
+  {
+    image: "/modern-apartment-building-roof-installation.jpg",
+    title: "Zateplenie plochých striech",
+    description: "Kvalitné zatepľovacie systémy zvyšujúce energetickú efektívnosť budov.",
+  },
+  {
+    image: "/industrial-warehouse-roof-renovation.jpg",
+    title: "Izolácie základových dosiek",
+    description: "Odborná izolácia základov proti vlhkosti a podzemnej vode.",
   },
   {
     image: "/roof-repair-worker-fixing-damaged-roof.jpg",
-    title: "Opravy striech",
-    description: "Rýchle a spoľahlivé opravy všetkých typov strešných poškodení.",
+    title: "Opravy plochých striech",
+    description: "Rýchle riešenie zatečení a poškodení hydroizolačných vrstiev.",
+  },
+  {
+    image: "/modern-roof-architecture-aerial-view.jpg",
+    title: "Rekonštrukcie striech",
+    description: "Kompletná obnova plochých striech vrátane odvodnenia a parozábran.",
+  },
+  {
+    image: "/roofing-installation-process.jpg",
+    title: "Izolácie základov",
+    description: "Ochrana základov proti radónu, vlhkosti a povrchovej vode.",
   },
 ]
 
@@ -42,7 +42,7 @@ export function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-16 reveal">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Rýchle, cenovo dostupné a kvalitné
+            Komplexné riešenia izolácie
           </h2>
         </div>
 
