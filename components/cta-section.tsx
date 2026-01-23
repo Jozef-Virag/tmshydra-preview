@@ -27,17 +27,16 @@ export function CtaSection() {
               Potrebujete hydroizoláciu alebo zateplenie?
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Naši odborníci vám poradia s izoláciou plochej strechy, zateplením či ochranou základov. Pôsobíme v Nitrianskom kraji.
+              Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Naši odborníci vám poradia s izoláciou plochej strechy, zateplením či ochranou základov.
             </p>
             <a
-              href="tel:+421911551354
-"
+              href="tel:+421900123456"
               className="inline-flex items-center gap-3 text-white hover:text-amber-500 transition-colors"
             >
               <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center">
                 <Phone className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold">+421 911 551 354</span>
+              <span className="text-2xl font-bold">+421 900 123 456</span>
             </a>
           </div>
         </div>

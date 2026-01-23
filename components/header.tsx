@@ -46,7 +46,7 @@ export function Header() {
               />
             </svg>
           </div>
-          <span className="text-xl font-bold text-white">TMSHydra</span>
+          <span className="text-xl font-bold text-white">Strechy</span>
         </Link>
 
         {/* Desktop Navigation */}

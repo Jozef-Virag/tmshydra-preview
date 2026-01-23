@@ -43,7 +43,7 @@ export function ContactSection() {
             Máte otázky? Radi vám pomôžeme
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Kontaktujte nás pre bezplatnú konzultáciu a nezáväznú cenovú ponuku. Pôsobíme v Nitrianskom kraji.
+            Kontaktujte nás pre bezplatnú konzultáciu a nezáväznú cenovú ponuku.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Adresa</h4>
-                  <p className="text-gray-600">Krížna 79<br />941 11 Palárikovo<br />Slovensko</p>
+                  <p className="text-gray-600">Hlavná 123<br />900 00 Mesto<br />Slovensko</p>
                 </div>
               </div>
 
@@ -69,8 +69,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Telefón</h4>
-                  <a href="tel:+421911551354" className="text-gray-600 hover:text-amber-500 transition-colors">
-                    +421 911 551 354
+                  <a href="tel:+421900123456" className="text-gray-600 hover:text-amber-500 transition-colors">
+                    +421 900 123 456
                   </a>
                 </div>
               </div>
@@ -81,8 +81,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                  <a href="mailto:info@tmshydra.sk" className="text-gray-600 hover:text-amber-500 transition-colors">
-                    info@tmshydra.sk
+                  <a href="mailto:info@strechy.sk" className="text-gray-600 hover:text-amber-500 transition-colors">
+                    info@strechy.sk
                   </a>
                 </div>
               </div>

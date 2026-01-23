@@ -10,7 +10,7 @@ const posts = [
     image: "/roof-maintenance-tips-homeowner.jpg",
     title: "Ako správne udržiavať plochú strechu",
     date: "15. január 2026",
-    author: "Ján Kováč",
+    author: "Martin Novák",
     excerpt: "Praktické rady pre predĺženie životnosti plochej strechy a prevenciu zatečení.",
   },
   {
@@ -18,7 +18,7 @@ const posts = [
     image: "/modern-roofing-materials-comparison.jpg",
     title: "Výber hydroizolácie pre plochú strechu",
     date: "10. január 2026",
-    author: "Mária Vargová",
+    author: "Katarína Horváthová",
     excerpt: "Porovnanie asfaltových pásov, PVC fólií a iných moderných hydroizolačných materiálov.",
   },
   {
@@ -26,7 +26,7 @@ const posts = [
     image: "/winter-roof.jpg",
     title: "Príprava plochej strechy na zimu",
     date: "5. január 2026",
-    author: "Peter Horváth",
+    author: "Peter Szabó",
     excerpt: "Dôležité kroky kontroly odvodnenia a hydroizolácie pred zimným obdobím.",
   },
 ]

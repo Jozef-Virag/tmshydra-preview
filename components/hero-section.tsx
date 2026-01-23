@@ -91,7 +91,7 @@ export function HeroSection() {
 
           {/* Description */}
           <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-xl">
-            Špecializujeme sa na hydroizolácie a zateplenie plochých striech, ako aj izolácie základových dosiek. Pôsobíme v Nitrianskom kraji s dlhoročnými skúsenosťami.
+            Špecializujeme sa na hydroizolácie a zateplenie plochých striech, ako aj izolácie základových dosiek.
           </p>
 
           {/* CTA Buttons */}

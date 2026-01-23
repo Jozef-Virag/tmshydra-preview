@@ -47,7 +47,7 @@ const blogPosts: Record<string, any> = {
   "priprava-strechy-na-zimu": {
     title: "Príprava strechy na zimu",
     date: "5. január 2026",
-    author: "Peter Horváth",
+    author: "Peter Szabó",
     category: "Sezónne",
     image: "/winter-roof.jpg",
     content: `

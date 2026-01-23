@@ -20,11 +20,11 @@ export function TestimonialsSection() {
       <div className="relative z-10 max-w-4xl mx-auto text-center reveal">
         <Quote className="w-16 h-16 text-amber-500 mx-auto mb-8" />
         <blockquote className="text-xl md:text-2xl text-white leading-relaxed mb-8 italic">
-          "Firma TMSHydra nám vyriešila dlhodobý problém so zatečením plochej strechy. Práce boli vykonané rýchlo, kvalitne a za rozumnú cenu. Môžem len odporučiť."
+          "Firma nám vyriešila dlhodobý problém so zatečením plochej strechy. Práce boli vykonané rýchlo, kvalitne a za rozumnú cenu. Môžem len odporučiť."
         </blockquote>
         <div className="mb-12">
-          <p className="text-white font-semibold text-lg">Ján Kováč</p>
-          <p className="text-gray-400">Majiteľ rodinného domu, Nitra</p>
+          <p className="text-white font-semibold text-lg">Martin Novák</p>
+          <p className="text-gray-400">Majiteľ rodinného domu</p>
         </div>
 
         {/* Partner Logos */}

@@ -21,7 +21,7 @@ const projects = [
     image: "/modern-apartment-building-roof-installation.jpg",
     title: "Zateplenie bytového domu",
     category: "Rezidenčné",
-    description: "Zateplenie plochej strechy bytového domu v Nitre",
+    description: "Zateplenie plochej strechy bytového domu",
   },
   {
     id: "3",
@@ -33,9 +33,9 @@ const projects = [
   },
   {
     id: "4",
-    slug: "rodinny-dom-palarikovo",
+    slug: "rodinny-dom",
     image: "/modern-roof-architecture-aerial-view.jpg",
-    title: "Rodinný dom - Palárikovo",
+    title: "Rodinný dom",
     category: "Rezidenčné",
     description: "Hydroizolácia plochej strechy rodinného domu",
   },

@@ -16,7 +16,7 @@ export function AboutSection() {
               Spoľahlivé izolácie pre váš dom či firmu
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Špecializujeme sa na komplexné riešenia hydroizolácií a zateplenia plochých striech, ako aj izolácie základových dosiek a základov. Pôsobíme v Nitrianskom kraji a okolí. Naše práce sú kvalitné, trvanlivé a vykonané podľa platných noriem. Dôverujte lokálnym odborníkom.
+              Špecializujeme sa na komplexné riešenia hydroizolácií a zateplenia plochých striech, ako aj izolácie základových dosiek a základov. Naše práce sú kvalitné, trvanlivé a vykonané podľa platných noriem. Dôverujte odborníkom s dlhoročnými skúsenosťami.
             </p>
             <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-6 rounded-none">
               Zistiť viac <ArrowRight className="ml-2 w-4 h-4" />

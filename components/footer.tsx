@@ -15,10 +15,10 @@ export function Footer() {
               <div className="w-8 h-8 bg-amber-500 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">M</span>
               </div>
-              <span className="text-xl font-bold">TMSHydra</span>
+              <span className="text-xl font-bold">Strechy</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Profesionálne hydroizolácie a zateplenie plochých striech, izolácie základov. Pôsobíme v Nitrianskom kraji s dôrazom na kvalitu a spokojnosť zákazníkov.
+              Profesionálne hydroizolácie a zateplenie plochých striech, izolácie základov. Poskytujeme služby s dôrazom na kvalitu a spokojnosť zákazníkov.
             </p>
             <div className="flex gap-4">
               <a
@@ -31,7 +31,7 @@ export function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/421911551354"
+                href="https://wa.me/421900123456"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-colors rounded"
@@ -57,15 +57,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">Krížna 79, 941 11 Palárikovo, Slovensko</span>
+                <span className="text-gray-400 text-sm">Hlavná 123, 900 00 Mesto, Slovensko</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">+421 911 551 354</span>
+                <span className="text-gray-400 text-sm">+421 900 123 456</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">info@tmshydra.sk</span>
+                <span className="text-gray-400 text-sm">info@strechy.sk</span>
               </li>
             </ul>
           </div>
@@ -130,7 +130,7 @@ export function Footer() {
       {/* Copyright */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6">
-          <p className="text-gray-500 text-sm text-center">© 2026 TMSHydra. Všetky práva vyhradené.</p>
+          <p className="text-gray-500 text-sm text-center">© 2026 Strechy. Všetky práva vyhradené.</p>
         </div>
       </div>
     </footer>
