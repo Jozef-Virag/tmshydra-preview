@@ -10,8 +10,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "TMSHydra - Profesionálne strešné služby",
-  description: "Kompletné riešenie pre vašu strechu. Profesionálne strešné a opravárenské služby.",
+  title: "TMS Hydra - Profesionálne hydroizolácie a zateplenie",
+  description: "Odborníci na hydroizolácie a zateplenie plochých striech, izolácie základov a základových dosiek.",
     generator: 'v0.app'
 }
 
